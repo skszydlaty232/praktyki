@@ -1,0 +1,9 @@
+# Bazowy obraz
+FROM postgres:18.2
+
+# Zmienne środowiskowe
+ENV POSTGRES_USER=admin
+ENV POSTGRES_DB=base
+
+# (opcjonalnie) kopiowanie plików inicjalizacyjnych
+COPY init.sql /docker-entrypoint-initdb.d/
