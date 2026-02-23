@@ -5,7 +5,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 
 # Kopiujemy naszą konfigurację
 COPY default.conf /etc/nginx/conf.d/
-
-EXPOSE 80
+COPY key.pem /etc/nginx/ssl/key.pem
+COPY cert.pem /etc/nginx/ssl/cert.pem
 
 CMD ["nginx", "-g", "daemon off;"]

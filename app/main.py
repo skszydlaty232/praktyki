@@ -27,7 +27,9 @@ def show_users():
             return "<h3>Brak użytkowników w bazie.</h3><a href='/add'>Dodaj użytkownika</a>"
 
         html = """
-        <h2>Users</h2>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <div class="container">
+        <h2>Uzytkownicy</h2>
         <a href="/add">➕ Dodaj nowego użytkownika</a><br><br>
         <table border="1" cellpadding="5">
             <tr><th>ID</th><th>Username</th><th>Email</th></tr>
@@ -39,6 +41,7 @@ def show_users():
             </tr>
             {% endfor %}
         </table>
+        </div>
         """
         return render_template_string(html, users=rows)
 
@@ -72,6 +75,8 @@ def add_user():
 
     # Jeśli GET, pokazujemy formularz
     html_form = """
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <div class="container">
     <h2>Dodaj użytkownika</h2>
     <form method="post">
         <label>Username: <input type="text" name="username"></label><br><br>
@@ -80,6 +85,7 @@ def add_user():
         <input type="submit" value="Dodaj">
     </form>
     <a href="/">Powrót do listy użytkowników</a>
+    </div>
     """
     return render_template_string(html_form)
 

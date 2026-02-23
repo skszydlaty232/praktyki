@@ -1,0 +1,117 @@
+/* ------------------------------------ */
+/* Globalne style strony */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------ */
+/* Kontener strony */
+.container {
+    max-width: 900px;       /* ograniczenie szerokości */
+    margin: 40px auto;      /* centrowanie horyzontalne + margines od góry */
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow-x: auto;       /* poziomy scroll jeśli coś nadal wyjdzie */
+}
+
+/* ------------------------------------ */
+/* Nagłówki */
+h2 {
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+}
+
+/* ------------------------------------ */
+/* Linki */
+a {
+    text-decoration: none;
+    color: #6c63ff;
+    font-weight: 500;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------------ */
+/* Formularze */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 12px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #6c63ff;
+}
+
+/* Przycisk submit */
+form input[type="submit"] {
+    padding: 10px 25px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #564fd6;
+}
+
+/* ------------------------------------ */
+/* Tabela użytkowników */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    table-layout: fixed; /* kluczowe: kolumny nie rozjeżdżają się */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    word-wrap: break-word;      /* łamanie długich słów */
+    overflow-wrap: break-word;  /* dodatkowe wsparcie */
+}
+
+th {
+    background-color: #6c63ff;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
